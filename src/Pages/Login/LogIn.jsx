@@ -1,19 +1,20 @@
 import React from "react";
 import "./LogIn.css";
+import pics from "../../Assets/itechLogInPics.svg";
 const LogIn = () => {
   return (
     <div className="logInFlex">
-      LogIn
       <div>
         <h2>Organize your workflow, boost your productivity</h2>
+        <img src={pics} alt="logIn" />
       </div>
-      <div>
-        <h3>Brand logo</h3>
-        <div>
+      <div className="logInContainer">
+        <div className="formWrapper">
+          <h3>Brand logo</h3>
           <span>Sign In</span>
           <span>Sign Up</span>
-          <button>Sign in with Google</button>
-          <form action="">
+          <button className="authBtn">Sign in with Google</button>
+          <form className="formDiv" action="">
             <label htmlFor="email">Email Address</label>
             <input
               type="email"
@@ -29,10 +30,16 @@ const LogIn = () => {
               id="password"
               placeholder="Insert your password"
             />
-            <input type="checkbox" name="" id="loggedIn" />
-            <label htmlFor="loggedIn">Keep me logged In</label>
-            <a href="">Forget Password</a>
-            <button type="submit">Sign In</button>
+            <div className="checkBoxFlex">
+              <label htmlFor="loggedIn">
+                <input type="checkbox" name="" id="loggedIn" />
+                Keep me logged In
+              </label>
+              <a href="">Forget Password</a>
+            </div>
+            <button className="loginBtn" type="submit">
+              Sign In
+            </button>
           </form>
         </div>
       </div>
