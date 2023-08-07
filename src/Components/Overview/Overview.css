@@ -1,0 +1,28 @@
+.overview {
+  max-width: 100vw;
+  height: 100vh;
+  margin-left: 20vw;
+}
+.overviewUpperWrapper {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchSpan {
+  max-width: 200px;
+  border: 2px solid aliceblue;
+  position: relative;
+}
+input {
+  border-radius: 20px;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+input:focus {
+  outline: none;
+}
+.iconDiv {
+  display: flex;
+  gap: 1rem;
+}

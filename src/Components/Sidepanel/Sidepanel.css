@@ -1,0 +1,26 @@
+.sidePanelWrapper {
+  position: fixed;
+  /* margin-top: 2rem; */
+  height: 100vh;
+  width: 20vw;
+  background-color: aliceblue;
+  padding: 2rem;
+}
+.sidePanelWrapper h2 {
+  margin-bottom: 2rem;
+}
+ul,
+ol {
+  list-style: none;
+}
+li {
+  background-color: #f3f9fe;
+  color: #5f6d7e;
+  padding: 1rem;
+}
+li:hover {
+  background-color: rgb(196, 241, 247);
+  cursor: pointer;
+  color: #437ef7;
+  border-radius: 10px;
+}
