@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;600;700&display=swap");
+
 .logInFlex {
   display: flex;
   justify-content: space-evenly;
@@ -11,8 +13,21 @@
   font-weight: 700;
   margin: 0 auto;
   transform: translateY(150px);
-  /* border-style: solid; */
-  /* border-color: #437ef7; */
+}
+@media screen and (max-width: 800px) {
+  .firstFlex {
+    background-color: lightgreen;
+    display: none;
+  }
+  .logInContainer {
+    transform: translateX(0rem);
+    max-height: 580px;
+    max-width: 400px;
+    margin-top: 2rem;
+  }
+  .inputWrapper {
+    max-width: 380px;
+  }
 }
 .logInContainer {
   /* position: absolute; */
@@ -30,19 +45,27 @@
 }
 .formWrapper h3 {
   color: #272d37;
-  font-family: Work Sans;
+  font-family: "Work Sans", sans-serif;
   margin: 0 auto;
 }
 .formDiv {
   display: flex;
   flex-direction: column;
+  font-family: "Work Sans", sans-serif;
+}
+label {
+  margin-bottom: 2rem;
 }
 .authBtn {
-  background-color: #dae0e6;
+  background-color: #ffffff;
   border: 2px solid #a5a5a54d;
   padding: 8px;
   color: #272d37;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Work Sans", sans-serif;
 }
 .loginBtn {
   background-color: #437ef7;
@@ -51,13 +74,33 @@
   border-radius: 8px;
   margin-top: 2rem;
   cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+}
+.inputWrapper {
+  border: 2px solid #a5a5a54d;
+  width: 580px;
+  padding: 8px;
+  position: relative;
 }
 input {
-  padding: 8px;
+  margin-right: 3rem;
   margin-top: 0.5rem;
+  font-size: 20px;
+  border: none;
+  width: -webkit-fill-available;
+}
+input:focus {
+  border: red;
+  outline: none;
 }
 .checkBoxFlex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: #437ef7;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
 }
