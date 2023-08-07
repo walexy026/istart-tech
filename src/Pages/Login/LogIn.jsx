@@ -63,7 +63,6 @@ const LogIn = () => {
                 {
                   <AiOutlineEyeInvisible
                     handleSubmit
-                    // icon={icon}
                     onClick={handleToggle}
                     style={{
                       fontSize: "2rem",
