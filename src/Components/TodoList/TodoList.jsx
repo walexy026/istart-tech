@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiCalendar } from "react-icons/bi";
+import { PiFlagPennantFill, PiCircleDuotone } from "react-icons/pi";
 import "./TodoList.css";
 
 const TodoList = () => {
@@ -29,15 +30,21 @@ const TodoList = () => {
   };
   return (
     <div>
-      <div>
-        <b>Task name</b>
+      <div className="toDoItems1">
+        <div className="taskName">
+          <PiCircleDuotone style={{ color: "red" }} />
+          <b>Task name</b>
+        </div>
         <p>Description</p>
-        <div>
-          <div>
+        <div className="datePriority">
+          <button className="date">
             <BiCalendar />
-            {date}
-          </div>
-          <div></div>
+            <b>{date} </b>
+          </button>
+          <button className="priority">
+            <PiFlagPennantFill style={{ color: "red" }} />
+            <b>Urgent</b>
+          </button>
         </div>
       </div>
       <div className="toDo">
@@ -55,12 +62,26 @@ const TodoList = () => {
           ))}
         </ul>
         <div className="task-input">
-          <input
+          <textarea
+            name=""
+            id=""
+            cols="150"
+            rows="10"
             type="text"
-            placeholder="Enter a new task..."
+            placeholder="Task Name"
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
-          />
+          ></textarea>
+          <div className="datePriority">
+            <button className="date">
+              <BiCalendar />
+              <b>{date} </b>
+            </button>
+            <button className="priority">
+              <PiFlagPennantFill style={{ color: "red" }} />
+              <b>Urgent</b>
+            </button>
+          </div>
           <button onClick={handleAddTask}>Add Task</button>
         </div>
       </div>
