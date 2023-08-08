@@ -30,33 +30,33 @@ const TodoList = () => {
   };
   return (
     <div>
-      <div className="toDoItems1">
-        <div className="taskName">
-          <PiCircleDuotone style={{ color: "red" }} />
-          <b>Task name</b>
-        </div>
-        <p>Description</p>
-        <div className="datePriority">
-          <button className="date">
-            <BiCalendar />
-            <b>{date} </b>
-          </button>
-          <button className="priority">
-            <PiFlagPennantFill style={{ color: "red" }} />
-            <b>Urgent</b>
-          </button>
-        </div>
-      </div>
       <div className="toDo">
         <h1>To-do </h1>
         <ul className="task-list">
           {tasks.map((task) => (
             <li key={task.id}>
-              <input
+              {/* <input
                 type="text"
                 value={task.text}
                 onChange={(e) => handleEditTask(task.id, e.target.value)}
-              />
+              /> */}
+              <div className="toDoItems1">
+                <div className="taskName">
+                  <PiCircleDuotone style={{ color: "red" }} />
+                  <b>{task.text}</b>
+                </div>
+                <p>Description</p>
+                <div className="datePriority">
+                  <button className="date">
+                    <BiCalendar />
+                    <b>{date} </b>
+                  </button>
+                  <button className="priority">
+                    <PiFlagPennantFill style={{ color: "red" }} />
+                    <b>Urgent</b>
+                  </button>
+                </div>
+              </div>
               <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
             </li>
           ))}
@@ -65,7 +65,7 @@ const TodoList = () => {
           <textarea
             name=""
             id=""
-            cols="150"
+            cols="180"
             rows="10"
             type="text"
             placeholder="Task Name"

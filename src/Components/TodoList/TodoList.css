@@ -10,16 +10,6 @@
 textarea {
   border-radius: 12px;
 }
-.task-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.task-list li {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
 
 .task-list input {
   flex: 1;
@@ -73,5 +63,5 @@ textarea {
 .flexBtn {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
