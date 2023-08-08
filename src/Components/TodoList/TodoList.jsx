@@ -72,17 +72,21 @@ const TodoList = () => {
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           ></textarea>
-          <div className="datePriority">
-            <button className="date">
-              <BiCalendar />
-              <b>{date} </b>
-            </button>
-            <button className="priority">
-              <PiFlagPennantFill style={{ color: "red" }} />
-              <b>Urgent</b>
+          <div className="flexBtn">
+            <div className="setDatePriority">
+              <button className="date">
+                <BiCalendar />
+                <b>Add Due Date </b>
+              </button>
+              <button className="priority">
+                <PiFlagPennantFill style={{ borderColor: "2px solid black" }} />
+                <b>Set Priority</b>
+              </button>
+            </div>
+            <button className="createTask" onClick={handleAddTask}>
+              Create Task
             </button>
           </div>
-          <button onClick={handleAddTask}>Add Task</button>
         </div>
       </div>
     </div>
