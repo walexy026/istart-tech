@@ -3,6 +3,7 @@ import "./Overview.css";
 import { BiSearch, BiSolidUserCircle } from "react-icons/bi";
 import { SlBell } from "react-icons/sl";
 import Theme from "../ThemeChanger/Theme";
+import TodoList from "../TodoList/TodoList";
 
 const Overview = () => {
   const current = new Date();
@@ -42,6 +43,7 @@ const Overview = () => {
           <span>List</span>
           <span>Board</span>
         </div>
+        <TodoList />
       </div>
     </div>
   );
