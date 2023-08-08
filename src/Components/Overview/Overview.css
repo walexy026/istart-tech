@@ -32,3 +32,8 @@ input:focus {
   background-color: #f2f4f7;
   height: 95vh;
 }
+.overviewDownTray h4 {
+  display: grid;
+  place-items: center;
+  font-family: "Work Sans";
+}

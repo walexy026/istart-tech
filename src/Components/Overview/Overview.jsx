@@ -36,7 +36,12 @@ const Overview = () => {
       </div>
       <div className="overviewDownTray">
         <b>Overview</b>
-        <h1>{date}</h1>
+        <h4>{date}</h4>
+
+        <div>
+          <span>List</span>
+          <span>Board</span>
+        </div>
       </div>
     </div>
   );
