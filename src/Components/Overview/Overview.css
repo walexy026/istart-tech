@@ -4,7 +4,7 @@
   margin-left: 20vw;
 }
 .overviewUpperWrapper {
-  background-color: #dae0e6;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,8 +15,9 @@
   position: relative;
 }
 input {
+  margin: 1rem 0;
   border-radius: 20px;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   font-size: 1rem;
 }
 input:focus {
@@ -25,4 +26,9 @@ input:focus {
 .iconDiv {
   display: flex;
   gap: 1rem;
+}
+
+.overviewDownTray {
+  background-color: #f2f4f7;
+  height: 95vh;
 }

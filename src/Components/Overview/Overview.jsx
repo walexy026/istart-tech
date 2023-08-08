@@ -1,10 +1,15 @@
 import React from "react";
 import "./Overview.css";
-import { BiMoon, BiSearch, BiSolidUserCircle } from "react-icons/bi";
+import { BiSearch, BiSolidUserCircle } from "react-icons/bi";
 import { SlBell } from "react-icons/sl";
 import Theme from "../ThemeChanger/Theme";
 
 const Overview = () => {
+  const current = new Date();
+  const date = `${current.toLocaleString("default", {
+    month: "long",
+  })} ${current.getDate()}, ${current.getFullYear()}`;
+
   return (
     <div className="overview">
       <div className="overviewUpperWrapper">
@@ -29,7 +34,10 @@ const Overview = () => {
           <BiSolidUserCircle fontSize="2rem" />
         </div>
       </div>
-      <b>Overview</b>
+      <div className="overviewDownTray">
+        <b>Overview</b>
+        <h1>{date}</h1>
+      </div>
     </div>
   );
 };
