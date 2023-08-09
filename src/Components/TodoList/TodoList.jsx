@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BiCalendar } from "react-icons/bi";
+import { BiCalendar, BiX } from "react-icons/bi";
 import { PiFlagPennantFill, PiCircleDuotone } from "react-icons/pi";
 import "./TodoList.css";
 
@@ -32,7 +32,7 @@ const TodoList = () => {
     <div>
       <div className="toDo">
         <h1>To-do </h1>
-        <ul className="task-list">
+        <ul className="taskList">
           {tasks.map((task) => (
             <li key={task.id}>
               {/* <input
@@ -61,31 +61,36 @@ const TodoList = () => {
             </li>
           ))}
         </ul>
-        <div className="task-input">
-          <textarea
-            name=""
-            id=""
-            cols="180"
-            rows="10"
-            type="text"
-            placeholder="Task Name"
-            value={newTask}
-            onChange={(e) => setNewTask(e.target.value)}
-          ></textarea>
-          <div className="flexBtn">
-            <div className="setDatePriority">
-              <button className="date">
-                <BiCalendar />
-                <b>Add Due Date </b>
-              </button>
-              <button className="priority">
-                <PiFlagPennantFill style={{ borderColor: "2px solid black" }} />
-                <b>Set Priority</b>
+        <div className="taskInpuModal">
+          <BiX fontSize="2rem" />
+          <div className="taskInput">
+            <textarea
+              name=""
+              id=""
+              cols="180"
+              rows="10"
+              type="text"
+              placeholder="Task Name"
+              value={newTask}
+              onChange={(e) => setNewTask(e.target.value)}
+            ></textarea>
+            <div className="flexBtn">
+              <div className="setDatePriority">
+                <button className="date">
+                  <BiCalendar />
+                  <b>Add Due Date </b>
+                </button>
+                <button className="priority">
+                  <PiFlagPennantFill
+                    style={{ borderColor: "2px solid black" }}
+                  />
+                  <b>Set Priority</b>
+                </button>
+              </div>
+              <button className="createTask" onClick={handleAddTask}>
+                Create Task
               </button>
             </div>
-            <button className="createTask" onClick={handleAddTask}>
-              Create Task
-            </button>
           </div>
         </div>
       </div>
