@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiCalendar, BiX } from "react-icons/bi";
 import { PiFlagPennantFill, PiCircleDuotone } from "react-icons/pi";
 import "./TodoList.css";
+import Modal from "./Modal";
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
@@ -27,6 +28,16 @@ const TodoList = () => {
       task.id === taskId ? { ...task, text: newText } : task
     );
     setTasks(updatedTasks);
+  };
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
   return (
     <div>
@@ -62,7 +73,6 @@ const TodoList = () => {
           ))}
         </ul>
         <div className="taskInpuModal">
-          <BiX fontSize="2rem" />
           <div className="taskInput">
             <textarea
               name=""
@@ -93,6 +103,13 @@ const TodoList = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <button onClick={openModal}>Open Modal</button>
+        <Modal isOpen={modalIsOpen} onClose={closeModal}>
+          <h2>Heading</h2>
+          <p>Test RUN the modal</p>
+        </Modal>
       </div>
     </div>
   );
